@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Workflow Architect
 
-## Getting Started
+[View live demo](https://workflow-architect.vercel.app/)
+[Screenshot1]
+[Screenshot2]
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Workflow Architect translates business problems into production-ready integration architectures in under 60 seconds.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Given a business scenario and constraints, it generates:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Recommended tool stack
+- Step-by-step integration workflow
+- Architecture diagram
+- Implementation timeline
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+All outputs are formatted for direct client delivery.
 
-## Learn More
+**Constraint-aware generation**
+Recommendations adapt to team size, budget, and existing tech stack.
+A no-code Zapier workflow for a non-technical team differs significantly from an enterprise-grade architecture
+and the output reflects that.
 
-To learn more about Next.js, take a look at the following resources:
+**Stateless architecture**
+All state is Base64-encoded into the URL.
+No database, authentication, or backend persistence required.
+Generated solutions can be shared instantly via link.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Structured LLM output**
+The API enforces a strict JSON schema with referential integrity between components.
+Responses are validated server-side, with graceful fallbacks on failure.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Mermaid diagram reliability**
+Prompt guardrails ensure valid diagrams:
 
-## Deploy on Vercel
+- camelCase node IDs only
+- No duplicate nodes
+- Subgraphs reference pre-defined elements
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This avoids common silent rendering failures in Mermaid.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Print-ready export**
+PDF generation uses a dedicated print stylesheet (not canvas rendering), producing clean pagination and high-quality output without external dependencies.
+
+## Stack
+
+Next.js 14 (App Router) · Tailwind CSS · Groq SDK (Llama 3.3 70B) · Mermaid.js · Vercel
+
+Prompt engineering and JSON schema design documented in `/prompts`.
+
+## Test Scenarios
+
+Includes 10 pre-built scenarios across:
+
+- E-commerce
+- SaaS
+- Finance
+- Healthcare
+- Marketing
+- Operations
+
+These demonstrate how varying constraints (budget, team, stack) produce meaningfully different architectures.
