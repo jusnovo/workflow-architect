@@ -1,8 +1,10 @@
 # Workflow Architect
 
 [View live demo](https://workflow-architect.vercel.app/)
-[Screenshot1]
-[Screenshot2]
+![Main Application Interface](./public/Screenshot1.png)
+![Architecture Diagram](./public/Screenshot2.png)
+![Solution](./public/Screenshot3.png)
+![Solution](./public/Screenshot4.png)
 
 ## Overview
 
