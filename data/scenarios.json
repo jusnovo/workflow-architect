@@ -1,0 +1,131 @@
+{
+  "scenarios": [
+    {
+      "id": 1,
+      "title": "E-commerce — image tagging + CRM sync",
+      "industry": "E-commerce",
+      "context": "Mid-size Shopify fashion brand",
+      "problem": "When new products are uploaded to Shopify, images need to be automatically tagged and synced with HubSpot. Currently, inventory and product data often become inconsistent between systems due to manual updates.",
+      "constraints": [
+        "Tools: Shopify, HubSpot",
+        "No internal dev team",
+        "Medium budget"
+      ],
+      "goal": "Automate image tagging and keep inventory + product data synced in near real-time"
+    },
+    {
+      "id": 2,
+      "title": "E-commerce — customer support automation",
+      "industry": "E-commerce",
+      "context": "DTC skincare brand with high order volume",
+      "problem": "Queries come via email and chat (~1000/week), and there is no clear triaging or escalation logic for complex cases.",
+      "constraints": [
+        "Tools: Shopify, Zendesk",
+        "Small support team"
+      ],
+      "goal": "Auto-handle common queries and escalate complex ones"
+    },
+    {
+      "id": 3,
+      "title": "SaaS — lead routing + enrichment",
+      "industry": "SaaS",
+      "context": "B2B SaaS company selling to enterprises",
+      "problem": "Leads are not enriched (e.g. company size, industry) and routing delays of several hours reduce conversion rates.",
+      "constraints": [
+        "Tools: Webflow, Salesforce",
+        "Sales team of 10"
+      ],
+      "goal": "Auto-enrich, score, and route leads to the right rep"
+    },
+    {
+      "id": 4,
+      "title": "Finance ops — invoice processing",
+      "industry": "Finance",
+      "context": "Small finance team handling supplier invoices",
+      "problem": "Invoices (200+ weekly) arrive in multiple formats (PDF, scanned images), and manual entry leads to frequent errors and delays.",
+      "constraints": [
+        "Tools: Gmail, Xero",
+        "Non-technical team",
+        "High format variability (PDFs, scans)",
+        "Requires error handling and human fallback"
+      ],
+      "goal": "Extract key data automatically and push to accounting system"
+    },
+    {
+      "id": 5,
+      "title": "Real estate — lead capture + follow-up",
+      "industry": "Real Estate",
+      "context": "Real estate agency handling property inquiries",
+      "problem": "Leads are not followed up within the first hour, leading to significant drop-off in conversion rates.",
+      "constraints": [
+        "Tools: Zoho CRM, Rightmove/web forms",
+        "Small sales team"
+      ],
+      "goal": "Capture, prioritise, and automate follow-ups"
+    },
+    {
+      "id": 6,
+      "title": "Healthcare — appointment + data flow",
+      "industry": "Healthcare",
+      "context": "Private clinic managing patient bookings",
+      "problem": "Appointments are booked across multiple channels and not synced properly, causing scheduling conflicts.",
+      "constraints": [
+        "Tools: Calendly, Salesforce Health Cloud, EMIS",
+        "High compliance sensitivity",
+        "Must comply with healthcare data regulations (e.g. GDPR)"
+      ],
+      "goal": "Centralise bookings and reduce manual coordination"
+    },
+    {
+      "id": 7,
+      "title": "Internal ops — document search",
+      "industry": "Operations",
+      "context": "Mid-size company with lots of internal docs",
+      "problem": "Employees spend ~30–60 minutes daily searching across fragmented systems, reducing productivity.",
+      "constraints": [
+        "Tools: Notion, Google Drive",
+        "Medium budget"
+      ],
+      "goal": "Enable natural language search across internal knowledge"
+    },
+    {
+      "id": 8,
+      "title": "Marketing — campaign performance tracking",
+      "industry": "Marketing",
+      "context": "Marketing team running multi-channel campaigns",
+      "problem": "Data from ads, email, and website analytics is fragmented and hard to analyse. Marketing decisions are delayed due to lack of unified reporting, making it difficult to optimise campaigns in real time.",
+      "constraints": [
+        "Tools: Google Ads, Meta, GA4",
+        "Small marketing team",
+        "No data engineering resource"
+      ],
+      "goal": "Unify data into a single reporting dashboard"
+    },
+    {
+      "id": 9,
+      "title": "Logistics — order tracking + alerts",
+      "industry": "Logistics",
+      "context": "E-commerce company with third-party logistics",
+      "problem": "When shipment status changes via ShipBob API, customers are not proactively notified, leading to increased support tickets.",
+      "constraints": [
+        "ShipBob API",
+        "Klaviyo",
+        "Slack"
+      ],
+      "goal": "Provide real-time tracking updates and proactive alerts"
+    },
+    {
+      "id": 10,
+      "title": "Sales — call summary + next step recommendations",
+      "industry": "Sales",
+      "context": "Tech sales team",
+      "problem": "Sales team needs call summaries and next-step recommendations automatically after every demo call.",
+      "constraints": [
+        "Gong or Zoom",
+        "Salesforce",
+        "Claude API"
+      ],
+      "goal": "After each demo call (5–10 per rep weekly), generate structured summaries, key objections, and recommended next steps, and sync them into Salesforce"
+    }
+  ]
+}

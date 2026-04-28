@@ -1,26 +1,69 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@media print {
+  body * {
+    visibility: hidden;
+  }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  #export-target,
+  #export-target * {
+    visibility: visible;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  #export-target {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .no-print {
+    display: none !important;
+  }
+
+  * {
+    overflow: visible !important;
+  }
+
+  svg {
+    background: transparent !important;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@media print {
+  body {
+    margin: 40px;
+  }
+}
+
+@media print {
+  svg {
+    background: transparent !important;
+  }
+  .node rect {
+    fill: #ffffff !important;
+    stroke: #000 !important;
+  }
+
+  .node text {
+    fill: #000 !important;
+  }
+
+  .edgePath path {
+    stroke: #000 !important;
+  }
+}
+
+@media print {
+  .print-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .grid {
+    break-inside: avoid;
+  }
+
+  h2 {
+    page-break-after: avoid;
+  }
 }
