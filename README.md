@@ -20,21 +20,25 @@ Given a business scenario and constraints, it generates:
 
 All outputs are formatted for direct client delivery.
 
-**Constraint-aware generation**
+### Constraint-aware generation
+
 Recommendations adapt to team size, budget, and existing tech stack.
 A no-code Zapier workflow for a non-technical team differs significantly from an enterprise-grade architecture
 and the output reflects that.
 
-**Stateless architecture**
+### Stateless architecture
+
 All state is Base64-encoded into the URL.
 No database, authentication, or backend persistence required.
 Generated solutions can be shared instantly via link.
 
-**Structured LLM output**
+### Structured LLM output
+
 The API enforces a strict JSON schema with referential integrity between components.
 Responses are validated server-side, with graceful fallbacks on failure.
 
-**Mermaid diagram reliability**
+### Mermaid diagram reliability
+
 Prompt guardrails ensure valid diagrams:
 
 - camelCase node IDs only
@@ -43,7 +47,8 @@ Prompt guardrails ensure valid diagrams:
 
 This avoids common silent rendering failures in Mermaid.
 
-**Print-ready export**
+### Print-ready export
+
 PDF generation uses a dedicated print stylesheet (not canvas rendering), producing clean pagination and high-quality output without external dependencies.
 
 ## Stack
